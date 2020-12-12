@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(./img/backGround0.png);
+    background-size:cover;
+}
+#start{
+    width:80%;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 150px;
+    background-color: #413f3fdc;
+}
+#startBtn{
+    width: 300px;
+    height: 80px;
+    margin-top: 150px;
+    background-color: #FFC135;
+    border: none;
+    font: 29px bold;
+}
+#startBtn:hover{
+    background-color: #ffe19d;
+}
+
+/* the question and answers style */
+#quesDiv{
+    display: none;
+    padding: 30px;
+    width: 50%;
+    opacity: 0.9;
+    margin-left: 10%;
+    margin-top: 10%;
+    text-align: center;
+    color: white;
+    font: 29px bold;
+    background-color: #413f3f;
+}
+#theQues{
+    padding: 20px;
+}
+#theAns{
+    background-color:cadetblue;
+}
+#theAns div{
+    padding: 10px;
+}
+#theAns div:hover{
+    background-color:rgb(70, 78, 78);
+    cursor: pointer;
+}
+
+/* the control buttons under the questions */
+#controlBar{
+    display: none;
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font: 29px bold;
+}
+#controlBar button{
+    width: 100px;
+    height: 50px;
+    border: none;
+    font-size: 17px;
+    background-color: #ffffffcc;
+    color:black;
+}
+#controlBar #submit{
+    background-color: rgba(12, 112, 95, 0.582);
+    color: white;
+}
+#controlBar #submit:hover{
+    background-color: rgba(24, 78, 80, 0.459);
+}
+#controlBar button:hover{
+    background-color: #b4b3b3cc;
+}
+#bookmark{
+    background-image: url("./img/bIcon.png");
+    background-size:cover;
+    padding-left: 30px;
+}
+#previous{
+    display: none;
+}
+
+/* the bookmark bar */
+#markBar{
+    display: inline-block;
+    position: relative;
+    left: 231px;
+    top: 69px;
+}
+#markBar li{
+    list-style: none;
+    font: 19px bold;
+    padding: 7px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.404);
+    cursor: pointer;
+}
+#markBar li:hover{
+    background-color: rgba(255, 255, 255, 0.692);
+}
