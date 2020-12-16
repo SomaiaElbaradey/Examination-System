@@ -132,3 +132,26 @@ body{
 #markBar li:hover{
     background-color: rgba(255, 255, 255, 0.692);
 }
+
+#timeContainer
+{ 
+    background-color:#e0e0e0;
+    height: 20px; 
+    width: 850px; 
+    /* float: left; */
+    border-radius: 8px;
+    margin-left: 0px;
+    display: none;
+    position:absolute;
+    left:10%;
+    top: 10%;
+}
+
+#timeBar {
+    background-color: cadetblue; 
+    height:50%; 
+    width:0%;    
+    position: relative;
+    top:25%;
+    border-radius: 8px;
+}

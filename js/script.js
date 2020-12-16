@@ -1,6 +1,7 @@
 var ques = document.getElementById("theQues");
 var ans = document.getElementById("theAns");
 var quesNo = 1;
+var userAnswer = new Array(shuffledQuestions.length);
 document.getElementById("startBtn").addEventListener("click", function () {
     document.getElementById("start").style.display = "none";
     document.getElementById("quesDiv").style.display = "inline-block";
@@ -16,9 +17,33 @@ document.getElementById("startBtn").addEventListener("click", function () {
         ans.append(childDiv);
     }
     answerFunc();
+    //time 
+    document.getElementById('timeContainer').style.display = 'block';
+    var count = 0;
+    var totalTimeInSeconds = shuffledQuestions.length * 30;
+    var intervalStart = setInterval(function () {
+        count++;
+        var timePercentage = (count / totalTimeInSeconds) * 100;
+        if (timePercentage <= 100) {
+            document.getElementById('timeBar').style.width = timePercentage + '%';
+        }
+        else {
+            clearInterval(intervalStart)
+        }
+        if (timePercentage == 50) {
+            document.getElementById('timeBar').style.backgroundColor = '#FFC135';
+        }
+        if (timePercentage == 75) {
+            document.getElementById('timeBar').style.backgroundColor = 'red';
+        }
+        if (timePercentage == 100) {
+            timeOut();
+        }
+    }, 1000);
 })
 //next button 
 document.getElementById("next").addEventListener("click", function () {
+    // console.log(userAnswer)
     if (quesNo == 1) {
         document.getElementById("previous").style.display = "inline-block";
     }
@@ -40,12 +65,17 @@ document.getElementById("next").addEventListener("click", function () {
             ans.append(childDiv);
         }
     }
+    //the selected answer
+    var answers = document.getElementsByClassName("answer")
+    for (var i = 0; i < answers.length; i++) {
+        if(answers[i].innerText == userAnswer[quesNo - 1]){
+            answers[i].style.backgroundColor = "rgb(70, 78, 78)"
+        }
+    }
     answerFunc();
 })
 //previous button
 document.getElementById("previous").addEventListener("click", function () {
-    // $(".selected").css("background-color","red")
-    console.log(document.getElementsByClassName("selected")[0])
     if (quesNo == shuffledQuestions.length) {
         document.getElementById("next").style.display = "inline-block";
     }
@@ -67,6 +97,12 @@ document.getElementById("previous").addEventListener("click", function () {
             childDiv.id = i;
             childDiv.innerText = shuffledQuestions[quesNo - 1].answers[i];
             ans.append(childDiv);
+        }
+    }
+    var answers = document.getElementsByClassName("answer")
+    for (var i = 0; i < answers.length; i++) {
+        if(answers[i].innerText == userAnswer[quesNo - 1]){
+            answers[i].style.backgroundColor = "rgb(70, 78, 78)"
         }
     }
     answerFunc();
@@ -109,6 +145,13 @@ document.getElementById("bookmark").addEventListener("click", function () {
                 childDiv.classList = "answer";
                 childDiv.innerText = shuffledQuestions[quesNo - 1].answers[i];
                 ans.append(childDiv);
+            }
+            //the selected answer
+            var answers = document.getElementsByClassName("answer")
+            for (var i = 0; i < answers.length; i++) {
+                if(answers[i].innerText == userAnswer[quesNo - 1]){
+                    answers[i].style.backgroundColor = "rgb(70, 78, 78)"
+                }
             }
             answerFunc();
         })
