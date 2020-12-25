@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../img/backGround1.png);
+    background-size:cover;
+}
+
+#nameDiv{
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;  
+    height: 50px;
+    margin: 0;  
+}
+
+#startSpan
+{
+    display: inline-block;
+    margin-top:10px;
+}
+
+#start{
+    width:80%;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    background-color: #413f3fdc;
+}
+#startBtn{
+    width: 300px;
+    height: 80px;
+    margin-top: 150px;
+    background-color: #FFC135;
+    border: none;
+    font: 29px bold;
+}
+#startBtn:hover{
+    background-color: #ffe19d;
+}
+
+/* the question and answers style */
+#quesDiv{
+    display: none;
+    padding: 30px;
+    width: 50%;
+    opacity: 0.9;
+    margin-left: 10%;
+    margin-top: 10%;
+    text-align: center;
+    color: white;
+    font: 29px bold;
+    background-color: #413f3f;
+}
+#theQues{
+    padding: 20px;
+}
+#theAns{
+    background-color:cadetblue;
+}
+#theAns div{
+    padding: 10px;
+}
+#theAns div:hover{
+    background-color:rgb(70, 78, 78);
+    cursor: pointer;
+}
+
+/* the control buttons under the questions */
+#controlBar{
+    display: none;
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font: 29px bold;
+}
+#controlBar button{
+    width: 100px;
+    height: 50px;
+    border: none;
+    font-size: 17px;
+    background-color: #ffffffcc;
+    color:black;
+}
+#controlBar #submit{
+    background-color: rgba(12, 112, 95, 0.582);
+    color: white;
+}
+#controlBar #submit:hover{
+    background-color: rgba(24, 78, 80, 0.459);
+}
+#controlBar button:hover{
+    background-color: #b4b3b3cc;
+}
+#bookmark{
+    background-image: url("../img/bIcon.png");
+    background-size:cover;
+    padding-left: 30px;
+}
+#previous{
+    display: none;
+}
+
+/* the bookmark bar */
+#markDiv{
+    display: none;
+    position:absolute;
+    left:76%;
+    top: 11%;
+    /* left:1170px;
+    top: 227px; */
+    height: 150px;
+    width: 230px;
+    opacity: 0.8;
+    background-image:url(../img/B6.png);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.842);
+    font: 25px bold;
+    box-sizing: content-box;
+    padding-top: 45px;
+}
+#markBar{
+    display: none;
+    position:absolute;
+    left:76%;
+    top: 30%;
+    /* left:1170px;
+    top: 227px; */
+    height: 463px;
+    width: 230px;
+    opacity: 0.8;
+    background-image:url(../img/b5.png);
+}
+#markBar li{
+    list-style: none;
+    font: 19px bold;
+    padding: 7px;
+    width: 130px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.404);
+    cursor: pointer;
+}
+#markBar li:hover{
+    background-color: rgba(255, 255, 255, 0.692);
+}
+
+#timeContainer
+{ 
+    background-color:#e0e0e0;
+    height: 20px; 
+    width: 850px;     
+    border-radius: 8px;
+    margin-left: 0px;
+    display: none;
+    position:absolute;
+    left:10%;
+    top: 10%;
+}
+
+#timeBar {
+    background-color: cadetblue; 
+    height:50%; 
+    width:0%;    
+    position: relative;
+    top:25%;
+    border-radius: 8px;
+}

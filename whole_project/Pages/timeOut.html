@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/cookieLibrary.js"></script>
+    <style>
+        body {
+            background-image: url(../img/backGround1.png);
+            background-size: cover;
+        }
+
+        #start {
+            width: 80%;
+            height: 600px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #413f3fdc;
+        }
+
+        #start p {
+            font: 27px bold;
+            color: white;
+            padding-top: 100px;
+        }
+
+        #start span {
+            color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="start">
+        <p>
+            <b>Sorry</b>,<span id="personName"></span> ! Time Out!<br>
+            your score is <span id="score"></span> out of <span id="quesNum"></span>
+        </p>
+        <div>
+            <img width="215" height="385" src="../img/timeOut.png">
+        </div>
+    </div>
+    <script src="../js/result.js"></script>
+</body>
+
+</html>
